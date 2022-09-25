@@ -1,0 +1,24 @@
+body::before, body::after {
+  display: flex;
+  position: fixed;
+  margin-top: -150px !important;
+  inset: 0;
+  z-index: -1;
+  --grad: radial-gradient(at 25%, red, rgba(255, 0, 0, 0.2) 50%, transparent 70%);
+  --mask: var(--grad), var(--grad);
+  -webkit-mask: var(--mask);
+  -webkit-mask-composite: source-in;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+  mix-blend-mode: color;
+  content: "";
+}
+body::before {
+  background: #000;
+  filter: url(#f);
+}
+body::after {
+  background: linear-gradient(90deg, #43AA8B, #F57E00 20%, #FA3005);
+}/*# sourceMappingURL=background.css.map */

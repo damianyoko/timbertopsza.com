@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Carpenters Personal Use";
+  src: url("/media/CarpentersPersonalUse-Regular.woff2") format("woff2"),
+    url("/media/CarpentersPersonalUse-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+::selection {
+  color: #eb5e28;
+  background: rgba(15, 76, 92 0.5);
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #121517;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+  --webkit-user-select: #eb5e28;
+  --moz-user-select: #eb5e28;
+  --webkit-user-drag: var(--moz-user-select);
+}
+
+body {
+  display: block;
+  top: 0;
+  color: #000103;
+  margin: 0;
+  padding: 0;
+  display: contents;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f15f04;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+h1 {
+  font-family: "Baloo Chettan 2", cursive;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  opacity: 80%;
+  transition: width 600ms ease;
+  overflow: hidden;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  user-select: none;
+}
+
+.fa-primary {
+  color: #fa3005;
+}
+
+.fa-secondary {
+  color: #f57e00;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin: auto;
+  font-family: "Baloo Chettan 2", cursive;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-360deg);
+}
+
+section {
+  display: flex;
+  max-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+section #logoMain {
+  z-index: -1;
+  opacity: 0.8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 30px;
+  height: 350px;
+  width: 350px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  position: relative;
+  display: flex;
+  font-family: "Baloo Chettan 2", cursive;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  position: relative;
+  display: flex;
+  font-family: "Garamond", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+}
+container {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  height: 100%;
+}
+
+p {
+  display: flex;
+  text-align: center;
+  max-width: 66%;
+}
+
+#gallery {
+  transform: scale(150%);
+}
+
+#heroP {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  font-stretch: ultra-expanded;
+  padding: 10px 10px 10px 10px;
+}
+
+#homeTitle {
+  position: static;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-shadow: #000103;
+  top: 0;
+  padding: 0 0 0 0;
+  font-size: 100px;
+  font-weight: 500;
+  margin: 0 0 0 0;
+}
+
+#heroSVG {
+  display: block;
+  position: relative;
+  align-self: center;
+  margin-top: auto;
+  max-width: 66vw;
+  max-height: 66vh;
+  background-size: contain;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    overflow-x: hidden!important;
+    overflow-y: hidden!important;
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  main{
+        margin-bottom: 5rem!important;
+  }
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    max-width: 250px;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+  main{
+    margin-bottom: 5rem!important;
+  }
+}
+
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #e7ebef;
+  --bg-secondary: #e4e4e4;
+}
+
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+}
+
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.solar #solarIcon {
+  display: block;
+}
+
